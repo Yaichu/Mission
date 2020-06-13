@@ -80,4 +80,16 @@ pipeline {
 
 
     }
+    post {
+        always {
+            script {
+                def status = "${env.BUILD_TAG} - ${currentBuild.currentResult}"
+                def body = """
+Build: ${currentBuild.displayName}
+Result: ${currentBuild.currentResult}
+"""
+                mail body: body, subject: status, to: 'danny880@gmail.com'
+            }
+        }
+    }
 }
