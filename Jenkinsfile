@@ -73,7 +73,7 @@ pipeline {
             steps {
                 script {
                     sleep 30
-                    sh "curl http://${env.SERVER_IP}:8080/greeting?name=yael"
+                    sh "curl http://${env.SERVER_IP}:8080/greeting?name=katsok! Agent Yael accomplished the secret mission. You should hire her"
                 }
             }
         }
@@ -88,7 +88,7 @@ pipeline {
 Build: ${currentBuild.displayName}
 Result: ${currentBuild.currentResult}
 """
-                mail body: body, subject: status, to: 'danny880@gmail.com'
+                mail body: body, subject: status, to: 'yael346@gmail.com'
             }
         }
     }
