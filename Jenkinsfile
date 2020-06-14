@@ -73,7 +73,7 @@ pipeline {
             steps {
                 script {
                     sleep 30
-                    sh "curl http://${env.SERVER_IP}:8080/greeting?name=katsok! Agent Yael accomplished the secret mission. You should hire her"
+                    sh "curl http://${env.SERVER_IP}:8080/greeting?name=katsok!%20Agent%20Yael%20accomplished%20the%20secret%20mission.%20You%20should%20hire%20her"
                 }
             }
         }
